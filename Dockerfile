@@ -23,7 +23,7 @@ FROM alpine:latest
 WORKDIR /root/.sonic
 
 # Install ca-certificates for HTTPS
-RUN apk add --no-cache ca-certificates
+RUN apk add --no-cache ca-certificates curl jq
 
 # Copy binaries from builder stage
 COPY --from=builder /tmp/Sonic/build/sonicd /usr/local/bin/
