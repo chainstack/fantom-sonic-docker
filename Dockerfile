@@ -10,7 +10,7 @@ WORKDIR /tmp
 
 RUN apt-get update && apt-get install -y --no-install-recommends make gcc g++ musl-dev git && rm -rf /var/lib/apt/lists/*
 
-RUN git clone --depth 1 --branch v1.2.1-f https://github.com/Fantom-foundation/Sonic.git && \
+RUN git clone --depth 1 --branch v1.2.1-g https://github.com/Fantom-foundation/Sonic.git && \
     cd Sonic && \
     make all
 
